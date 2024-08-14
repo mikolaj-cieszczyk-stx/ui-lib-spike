@@ -1,119 +1,158 @@
 ---
-import { Button } from '../components/Button/Button';
-import { Checkbox } from '../components/Checkbox/Checkbox';
-import { Icon } from '../components/Icon/Icon';
-import { Input } from '../components/Input/Input';
-import { Select } from '../components/Select/Select';
-import { AntdSwitch } from '../components/Switch/Switch';
-import { Link, Text, Title } from '../components/Typography/Typography';
-import Layout from '../layouts/Layout.astro';
-
+import { Button, HuiButton } from "../components/Button/Button";
+import { Checkbox, HuiCheckbox } from "../components/Checkbox/Checkbox";
+import { Icon } from "../components/Icon/Icon";
+import { AntDesignInput, HeadlessUiInput } from "../components/Input/Input";
+import { Select, HuiSelect } from "../components/Select/Select";
+import { AntDesignSwitch, HeadlessUiSwitch } from "../components/Switch/Switch";
+import {
+  Link,
+  Text,
+  Title,
+  HuiTypographyComponent,
+} from "../components/Typography/Typography";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
+  <main class="grid grid-cols-2 gap-4">
+    {/* Ant Design Section */}
+    <div class="flex flex-col gap-2 border-r-2 px-2">
+      <h1>Ant Design</h1>
 
-		<div class="flex flex-col gap-2">
-			<h1 class="font-bold mr-auto">
-				Switch
-			</h1>
+      {/* Ant Design Switches */}
+      <h2 class="mr-auto font-bold">Switch</h2>
+      <AntDesignSwitch client:load />
+      <AntDesignSwitch client:load label="Label" />
 
-			<AntdSwitch client:load />
-			<AntdSwitch client:load label="Label" />
+      {/* Ant Design Typography */}
+      <h2 class="mr-auto font-bold">Typography</h2>
+      <Title>h1. Ant Design</Title>
+      <Title level={2}>h2. Ant Design</Title>
+      <Title level={3}>h3. Ant Design</Title>
+      <Text>Ant Design (default)</Text>
+      <Text mark>Ant Design (mark)</Text>
+      <Text underline>Ant Design (underline)</Text>
+      <Text delete>Ant Design (delete)</Text>
+      <Text strong>Ant Design (strong)</Text>
+      <Text italic>Ant Design (italic)</Text>
+      <Link href="https://ant.design" target="_blank">Ant Design (Link)</Link>
 
+      {/* Ant Design Input */}
+      <h2 class="mr-auto font-bold">Input</h2>
+      <AntDesignInput className="custom-input" placeholder="Enter text here" />
 
-			<h1 class="font-bold mr-auto">
-				Typography
-			</h1>
+      {/* Ant Design Select */}
+      <h2 class="mr-auto font-bold">Select</h2>
+      <Select
+        defaultValue="lucy"
+        onChange={() => console.log("elo")}
+        options={[
+          { key: 1, value: "jack", label: "Jack" },
+          { key: 2, value: "lucy", label: "Lucy" },
+          { key: 3, value: "Yiminghe", label: "yiminghe" },
+          { key: 4, value: "disabled", label: "Disabled", disabled: true },
+        ]}
+      />
 
-			<Title>h1. Ant Design</Title>
-			<Title level={2}>h2. Ant Design</Title>
-    <Title level={3}>h3. Ant Design</Title>
-    <Title level={4}>h4. Ant Design</Title>
-    <Title level={5}>h5. Ant Design</Title>
-		<Text>Ant Design (default)</Text>
-    <Text mark>Ant Design (mark)</Text>
-    <Text underline>Ant Design (underline)</Text>
-    <Text delete>Ant Design (delete)</Text>
-    <Text strong>Ant Design (strong)</Text>
-    <Text italic>Ant Design (italic)</Text>
+      {/* Ant Design Checkbox */}
+      <h2 class="mr-auto font-bold">Checkbox</h2>
+      <Checkbox>Checkbox</Checkbox>
 
-    <Link href="https://ant.design" target="_blank">
-      Ant Design (Link)
-    </Link>
-    <Input className="custom-input" placeholder="Enter text here" />
-    <Select
-      defaultValue="lucy"
-			onChange={() => console.log('elo')}
-      options={[
-        { value: 'jack', label: 'Jack' },
-        { value: 'lucy', label: 'Lucy' },
-        { value: 'Yiminghe', label: 'yiminghe' },
-        { value: 'disabled', label: 'Disabled', disabled: true },
-      ]}
-    />
-    <Checkbox className="custom-checkbox">Checkbox</Checkbox>
-		<p></p>
-    <Button className="custom-button" type="primary">Submit</Button>
-    <Icon className="custom-icon" icon="check" />
-		</div>
-	</main>
+      {/* Ant Design Button */}
+      <h2 class="mr-auto font-bold">Button</h2>
+      <Button>Submit</Button>
+      <Icon className="custom-icon" icon="check" />
+    </div>
+
+    {/* Headless UI Section */}
+    <div class="flex flex-col gap-2 px-2">
+      <h1>Headless UI</h1>
+
+      {/* Headless UI Switches */}
+      <h2 class="mr-auto font-bold">Switch</h2>
+      <HeadlessUiSwitch client:load />
+      <HeadlessUiSwitch client:load label="Label" />
+
+      {/* Headless UI Typography */}
+      <h2 class="mr-auto font-bold">Typography</h2>
+      <HuiTypographyComponent />
+
+      {/* Headless UI Input */}
+      <h2 class="mr-auto font-bold">Input</h2>
+      <HeadlessUiInput />
+
+      {/* Headless UI Select */}
+      <h2 class="mr-auto font-bold">Select</h2>
+      <HuiSelect />
+
+      {/* Headless UI Checkbox */}
+      <h2 class="mr-auto font-bold">Checkbox</h2>
+      <HuiCheckbox />
+
+      {/* Headless UI Button */}
+      <h2 class="mr-auto font-bold">Button</h2>
+      <HuiButton>elo</HuiButton>
+    </div>
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
+  main {
+    margin: auto;
+    padding: 1rem;
+    max-width: calc(100% - 2rem);
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .astro-a {
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 220px;
+    height: auto;
+    z-index: -1;
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    margin-bottom: 2rem;
+    border: 1px solid rgba(var(--accent-light), 25%);
+    background: linear-gradient(
+      rgba(var(--accent-dark), 66%),
+      rgba(var(--accent-dark), 33%)
+    );
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  .instructions code {
+    font-size: 0.8em;
+    font-weight: bold;
+    background: rgba(var(--accent-light), 12%);
+    color: rgb(var(--accent-light));
+    border-radius: 4px;
+    padding: 0.3em 0.4em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent-light));
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+  }
 </style>
