@@ -21,12 +21,16 @@ import Layout from "../layouts/Layout.astro";
       <h1 class="text-center">Ant Design</h1>
 
       {/* Ant Design Switches */}
+      <hr />
       <h2 class="mr-auto font-bold">Switch</h2>
+
       <AntDesignSwitch client:load />
       <AntDesignSwitch client:load label="Label" />
 
       {/* Ant Design Typography */}
+      <hr />
       <h2 class="mr-auto font-bold">Typography</h2>
+
       <Title>h1. Ant Design</Title>
       <Title level={2}>h2. Ant Design</Title>
       <Title level={3}>h3. Ant Design</Title>
@@ -39,11 +43,15 @@ import Layout from "../layouts/Layout.astro";
       <Link href="https://ant.design" target="_blank">Ant Design (Link)</Link>
 
       {/* Ant Design Input */}
+      <hr />
       <h2 class="mr-auto font-bold">Input</h2>
+
       <AntDesignInput className="custom-input" placeholder="Enter text here" />
 
       {/* Ant Design Select */}
+      <hr />
       <h2 class="mr-auto font-bold">Select</h2>
+
       <Select
         defaultValue="lucy"
         onChange={() => console.log("elo")}
@@ -56,11 +64,15 @@ import Layout from "../layouts/Layout.astro";
       />
 
       {/* Ant Design Checkbox */}
+      <hr />
       <h2 class="mr-auto font-bold">Checkbox</h2>
+
       <Checkbox>Checkbox</Checkbox>
 
       {/* Ant Design Button */}
+      <hr />
       <h2 class="mr-auto font-bold">Button</h2>
+
       <Button>Submit</Button>
       <Icon className="custom-icon" icon="check" />
     </div>
@@ -70,33 +82,154 @@ import Layout from "../layouts/Layout.astro";
       <h1 class="text-center">Headless UI</h1>
 
       {/* Headless UI Switches */}
+      <hr />
       <h2 class="mr-auto font-bold">Switch</h2>
+
       <HeadlessUiSwitch client:load />
       <HeadlessUiSwitch client:load label="Label" />
 
       {/* Headless UI Typography */}
+      <hr />
       <h2 class="mr-auto font-bold">Typography</h2>
+
       <HuiTypographyComponent />
 
       {/* Headless UI Input */}
+      <hr />
       <h2 class="mr-auto font-bold">Input</h2>
+
       <HeadlessUiInput />
 
       {/* Headless UI Select */}
+      <hr />
       <h2 class="mr-auto font-bold">Select</h2>
+
       <HuiSelect />
 
       {/* Headless UI Checkbox */}
+      <hr />
       <h2 class="mr-auto font-bold">Checkbox</h2>
+
       <HuiCheckbox />
 
       {/* Headless UI Button */}
+      <hr />
       <h2 class="mr-auto font-bold">Button</h2>
+
       <HuiButton>elo</HuiButton>
     </div>
     {/* Chakra UI Section */}
     <div class="flex flex-col gap-2 border-2 p-2">
-      <h1 class="text-center">Chakra UI</h1>
+      <h1 class="text-center">daisyUI</h1>
+      <hr />
+      <h2 class="mr-auto font-bold">Switch</h2>
+      <input
+        type="checkbox"
+        class="daisy-toggle daisy-toggle-success"
+        checked="checked"
+      />
+      <input
+        type="checkbox"
+        class="daisy-toggle daisy-toggle-warning"
+        checked="checked"
+      />
+      <input
+        type="checkbox"
+        class="daisy-toggle daisy-toggle-info"
+        checked="checked"
+      />
+      <input
+        type="checkbox"
+        class="daisy-toggle daisy-toggle-error"
+        checked="checked"
+      />
+
+      <hr />
+      <h2 class="mr-auto font-bold">Typography</h2>
+      <div class="prose">
+        <h1 class="text-6xl">This is a Heading 1</h1>
+        <h1 class="text-4xl">This is a Heading 2</h1>
+        <h1 class="text-3xl">This is a Heading 3</h1>
+        <p>
+          This is a paragraph. It has some text describing something
+          interesting.
+        </p>
+        <blockquote
+          class="text-xl font-semibold italic text-gray-900 underline"
+        >
+          This is a blockquote, providing some highlighted text or a quote.
+        </blockquote>
+        <ul class="ax-w-md list-inside list-disc space-y-1 text-gray-900">
+          <li>This is an item in a list.</li>
+          <li>Here's another item.</li>
+          <li>And another one.</li>
+        </ul>
+
+        <ol class="max-w-md list-inside list-decimal space-y-1 text-gray-900">
+          <li>This is an item in a list.</li>
+          <li>Here's another item.</li>
+          <li>And another one.</li>
+        </ol>
+        <a
+          href="https://wp.pl"
+          target="_blank"
+          class="font-medium text-blue-600 hover:underline dark:text-blue-500"
+        >
+          daisyUI Link
+        </a>
+      </div>
+
+      <hr />
+      <h2 class="mr-auto font-bold">Input</h2>
+      <input
+        type="text"
+        placeholder="Type here"
+        class="daisy-input daisy-input-bordered w-full max-w-xs"
+      />
+
+      <hr />
+      <h2 class="mr-auto font-bold">Select</h2>
+      <select class="daisy-select w-full max-w-xs">
+        <option disabled selected>Pick your favorite Simpson</option>
+        <option>Homer</option>
+        <option>Marge</option>
+        <option>Bart</option>
+        <option>Lisa</option>
+        <option>Maggie</option>
+      </select>
+
+      <hr />
+      <h2 class="mr-auto font-bold">Checkbox</h2>
+      <input type="checkbox" checked="checked" class="checkbox" />
+
+      <hr />
+      <h2 class="mr-auto font-bold">Button</h2>
+      <div class="grid w-1/2 grid-cols-2 gap-2">
+        <button
+          class="daisy-btn bg-primary w-max rounded-full px-2 py-1 text-white"
+          >Button</button
+        >
+        <button
+          class="daisy-btn bg-neutral w-max rounded-full px-2 py-1 text-white"
+          >Neutral</button
+        >
+        <button
+          class="daisy-btn bg-primary w-max rounded-full px-2 py-1 text-white"
+          >Primary</button
+        >
+        <button class="daisy-btn bg-secondary w-max rounded-full px-2 py-1"
+          >Secondary</button
+        >
+        <button class="daisy-btn bg-accent w-max rounded-full px-2 py-1"
+          >Accent</button
+        >
+        <button class="daisy-btn bg-ghost w-max rounded-full px-2 py-1"
+          >Ghost</button
+        >
+        <button class="daisy-btn bg-link w-max rounded-full px-2 py-1"
+          >Link</button
+        >
+      </div>
     </div>
   </main>
 </Layout>
