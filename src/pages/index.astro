@@ -18,7 +18,7 @@ import Layout from "../layouts/Layout.astro";
   <main class="grid grid-cols-2 gap-4">
     {/* Ant Design Section */}
     <div class="flex flex-col gap-2 border-2 p-2">
-      <h1 class="text-center">Ant Design</h1>
+      <h1 class="text-center text-4xl">Ant Design</h1>
 
       {/* Ant Design Switches */}
       <hr />
@@ -31,15 +31,16 @@ import Layout from "../layouts/Layout.astro";
       <hr />
       <h2 class="mr-auto font-bold">Typography</h2>
 
-      <Title>h1. Ant Design</Title>
-      <Title level={2}>h2. Ant Design</Title>
-      <Title level={3}>h3. Ant Design</Title>
-      <Text>Ant Design (default)</Text>
-      <Text mark>Ant Design (mark)</Text>
-      <Text underline>Ant Design (underline)</Text>
-      <Text delete>Ant Design (delete)</Text>
-      <Text strong>Ant Design (strong)</Text>
-      <Text italic>Ant Design (italic)</Text>
+      <Title>This is a Heading 1</Title>
+      <Title level={2}>This is a Heading 2</Title>
+      <Title level={3}>This is a Heading 3</Title>
+      <Text
+        >This is a paragraph. It has some text describing something interesting.</Text
+      >
+      <Text underline delete strong italic
+        >This is a blockquote, providing some highlighted text or a quote.</Text
+      >
+
       <Link href="https://ant.design" target="_blank">Ant Design (Link)</Link>
 
       {/* Ant Design Input */}
@@ -79,7 +80,7 @@ import Layout from "../layouts/Layout.astro";
 
     {/* Headless UI Section */}
     <div class="flex flex-col gap-2 border-2 p-2">
-      <h1 class="text-center">Headless UI</h1>
+      <h1 class="text-center text-4xl">Headless UI</h1>
 
       {/* Headless UI Switches */}
       <hr />
@@ -104,7 +105,7 @@ import Layout from "../layouts/Layout.astro";
       <hr />
       <h2 class="mr-auto font-bold">Select</h2>
 
-      <HuiSelect />
+      <HuiSelect client:load />
 
       {/* Headless UI Checkbox */}
       <hr />
@@ -120,27 +121,27 @@ import Layout from "../layouts/Layout.astro";
     </div>
     {/* daisyUI Section */}
     <div class="flex flex-col gap-2 border-2 p-2">
-      <h1 class="text-center">daisyUI</h1>
+      <h1 class="text-center text-4xl">daisyUI</h1>
       <hr />
       <h2 class="mr-auto font-bold">Switch</h2>
       <input
         type="checkbox"
-        class="daisy-toggle daisy-toggle-success"
+        class="daisy-toggle-success daisy-toggle"
         checked="checked"
       />
       <input
         type="checkbox"
-        class="daisy-toggle daisy-toggle-warning"
+        class="daisy-toggle-warning daisy-toggle"
         checked="checked"
       />
       <input
         type="checkbox"
-        class="daisy-toggle daisy-toggle-info"
+        class="daisy-toggle-info daisy-toggle"
         checked="checked"
       />
       <input
         type="checkbox"
-        class="daisy-toggle daisy-toggle-error"
+        class="daisy-toggle-error daisy-toggle"
         checked="checked"
       />
 
@@ -184,7 +185,7 @@ import Layout from "../layouts/Layout.astro";
       <input
         type="text"
         placeholder="Type here"
-        class="daisy-input daisy-input-bordered w-full max-w-xs"
+        class="daisy-input-bordered daisy-input block w-full max-w-xs rounded border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
       />
 
       <hr />
@@ -206,27 +207,27 @@ import Layout from "../layouts/Layout.astro";
       <h2 class="mr-auto font-bold">Button</h2>
       <div class="grid w-1/2 grid-cols-2 gap-2">
         <button
-          class="daisy-btn bg-primary w-max rounded-full px-2 py-1 text-white"
+          class="daisy-btn w-max rounded-full bg-primary px-2 py-1 text-white"
           >Button</button
         >
         <button
-          class="daisy-btn bg-neutral w-max rounded-full px-2 py-1 text-white"
+          class="daisy-btn w-max rounded-full bg-neutral px-2 py-1 text-white"
           >Neutral</button
         >
         <button
-          class="daisy-btn bg-primary w-max rounded-full px-2 py-1 text-white"
+          class="daisy-btn w-max rounded-full bg-primary px-2 py-1 text-white"
           >Primary</button
         >
-        <button class="daisy-btn bg-secondary w-max rounded-full px-2 py-1"
+        <button class="daisy-btn w-max rounded-full bg-secondary px-2 py-1"
           >Secondary</button
         >
-        <button class="daisy-btn bg-accent w-max rounded-full px-2 py-1"
+        <button class="daisy-btn w-max rounded-full bg-accent px-2 py-1"
           >Accent</button
         >
-        <button class="daisy-btn bg-ghost w-max rounded-full px-2 py-1"
+        <button class="bg-ghost daisy-btn w-max rounded-full px-2 py-1"
           >Ghost</button
         >
-        <button class="daisy-btn bg-link w-max rounded-full px-2 py-1"
+        <button class="bg-link daisy-btn w-max rounded-full px-2 py-1"
           >Link</button
         >
       </div>

@@ -14,7 +14,7 @@ export const AntDesignSwitch: React.FC<AntdSwitchProps> = ({
   };
 
   return (
-    <div className="flex gap-2 items-center">
+    <div className="flex items-center gap-2">
       <AntdSwitch
         className="bg-gray-300 hover:bg-gray-400"
         {...props}
@@ -31,11 +31,11 @@ interface HuiSwitchProps {
 
 export function HeadlessUiSwitch({ label }: HuiSwitchProps) {
   return (
-    <Field className="flex gap-2 items-center">
+    <Field className="flex items-center gap-2">
       <>
         <HuiSwitch
           defaultChecked={false}
-          className="group inline-flex h-6 w-11 items-center rounded-full bg-gray-300 hover:bg-gray-400 transition data-[checked]:bg-green-600 data-[checked]:hover:bg-green-700"
+          className="group inline-flex h-6 w-11 items-center rounded-full bg-gray-300 transition hover:bg-gray-400 data-[checked]:bg-green-600 data-[checked]:hover:bg-green-700"
         >
           <span className="size-4 translate-x-1 rounded-full bg-white transition group-data-[checked]:translate-x-6" />
         </HuiSwitch>

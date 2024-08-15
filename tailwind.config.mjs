@@ -3,7 +3,17 @@ export default {
   important: true,
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "custom-green-hover": "rgba(0, 128, 117, 0.1)",
+        "custom-green-pressed": "rgba(0, 128, 117, 0.2)",
+        green: {
+          600: "#008075",
+          700: "#006058",
+          800: "#004942",
+        },
+      },
+    },
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
   daisyui: {

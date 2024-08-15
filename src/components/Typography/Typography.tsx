@@ -11,16 +11,16 @@ export const HuiTypographyComponent = () => {
       <p>
         This is a paragraph. It has some text describing something interesting.
       </p>
-      <blockquote className="text-xl italic font-semibold text-gray-900 underline">
+      <blockquote className="text-xl font-semibold italic text-gray-900 underline">
         This is a blockquote, providing some highlighted text or a quote.
       </blockquote>
-      <ul className="ax-w-md space-y-1 text-gray-900 list-disc list-inside">
+      <ul className="ax-w-md list-inside list-disc space-y-1 text-gray-900">
         <li>This is an item in a list.</li>
         <li>Here's another item.</li>
         <li>And another one.</li>
       </ul>
 
-      <ol className="max-w-md space-y-1 text-gray-900 list-decimal list-inside">
+      <ol className="max-w-md list-inside list-decimal space-y-1 text-gray-900">
         <li>This is an item in a list.</li>
         <li>Here's another item.</li>
         <li>And another one.</li>
@@ -28,7 +28,7 @@ export const HuiTypographyComponent = () => {
       <a
         href="https://wp.pl"
         target="_blank"
-        className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+        className="font-medium text-blue-600 hover:underline dark:text-blue-500"
       >
         HUI Link
       </a>
