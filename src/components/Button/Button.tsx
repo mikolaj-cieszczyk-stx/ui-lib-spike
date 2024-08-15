@@ -1,13 +1,12 @@
 import {
-  Button as AntdButton,
-  type ButtonProps as AntdButtonProps,
-} from "antd";
-import {
   Button as HeadlessButton,
   type ButtonProps as HuiProps,
-} from "@headlessui/react";
+} from '@headlessui/react';
+import {
+  Button as AntdButton,
+  type ButtonProps as AntdButtonProps,
+} from 'antd';
 
-// Ant Design Button Component
 export const Button: React.FC<AntdButtonProps> = (props) => {
   return (
     <AntdButton
@@ -17,11 +16,9 @@ export const Button: React.FC<AntdButtonProps> = (props) => {
   );
 };
 
-// Headless UI Button Component with a variety of button styles
 export const HuiButton: React.FC<HuiProps> = (props) => {
   return (
     <div className="grid grid-cols-2 gap-2">
-      {/* Default Button */}
       <HeadlessButton
         type="button"
         className="flex h-6 w-max items-center rounded-full bg-green-600 px-2 py-1 text-sm font-medium text-white hover:bg-green-700 active:bg-green-800 disabled:bg-gray-400"
@@ -103,7 +100,7 @@ export const HuiButton: React.FC<HuiProps> = (props) => {
 
       <HeadlessButton
         type="button"
-        className="border-3 hover:bg-custom-green-hover active:bg-custom-green-pressed flex h-6 w-max items-center rounded-full border border-green-600 px-2 py-1 text-sm font-medium text-green-600 disabled:border-gray-400 disabled:bg-inherit disabled:text-gray-400"
+        className="border-3 flex h-6 w-max items-center rounded-full border border-green-600 px-2 py-1 text-sm font-medium text-green-600 hover:bg-custom-green-hover active:bg-custom-green-pressed disabled:border-gray-400 disabled:bg-inherit disabled:text-gray-400"
       >
         Button
       </HeadlessButton>
@@ -111,14 +108,14 @@ export const HuiButton: React.FC<HuiProps> = (props) => {
       <HeadlessButton
         disabled
         type="button"
-        className="border-3 hover:bg-custom-green-hover active:bg-custom-green-pressed flex h-6 w-max items-center rounded-full border border-green-600 px-2 py-1 text-sm font-medium text-green-600 disabled:border-gray-400 disabled:bg-inherit disabled:text-gray-400"
+        className="border-3 flex h-6 w-max items-center rounded-full border border-green-600 px-2 py-1 text-sm font-medium text-green-600 hover:bg-custom-green-hover active:bg-custom-green-pressed disabled:border-gray-400 disabled:bg-inherit disabled:text-gray-400"
       >
         Disabled
       </HeadlessButton>
 
       <HeadlessButton
         type="button"
-        className="border-3 hover:bg-custom-green-hover active:bg-custom-green-pressed flex h-6 w-max items-center justify-center gap-2 rounded-full border border-green-600 px-2 py-1 text-center text-sm font-medium text-green-600 disabled:border-gray-400 disabled:bg-gray-400 disabled:bg-inherit disabled:text-gray-400"
+        className="border-3 flex h-6 w-max items-center justify-center gap-2 rounded-full border border-green-600 px-2 py-1 text-center text-sm font-medium text-green-600 hover:bg-custom-green-hover active:bg-custom-green-pressed disabled:border-gray-400 disabled:bg-gray-400 disabled:bg-inherit disabled:text-gray-400"
       >
         Button
         <svg
@@ -135,7 +132,7 @@ export const HuiButton: React.FC<HuiProps> = (props) => {
       <HeadlessButton
         disabled
         type="button"
-        className="border-3 hover:bg-custom-green-hover active:bg-custom-green-pressed flex h-6 w-max items-center justify-center gap-2 rounded-full border border-green-600 px-2 py-1 text-center text-sm font-medium text-green-600 disabled:border-gray-400 disabled:bg-gray-400 disabled:bg-inherit disabled:text-gray-400"
+        className="border-3 flex h-6 w-max items-center justify-center gap-2 rounded-full border border-green-600 px-2 py-1 text-center text-sm font-medium text-green-600 hover:bg-custom-green-hover active:bg-custom-green-pressed disabled:border-gray-400 disabled:bg-gray-400 disabled:bg-inherit disabled:text-gray-400"
       >
         Disabled
         <svg
@@ -151,7 +148,7 @@ export const HuiButton: React.FC<HuiProps> = (props) => {
 
       <HeadlessButton
         type="button"
-        className="border-3 hover:bg-custom-green-hover active:bg-custom-green-pressed flex h-6 w-max items-center rounded-full border border-green-600 px-2 py-1 text-sm text-green-600 disabled:border-gray-400 disabled:bg-inherit disabled:text-gray-400"
+        className="border-3 flex h-6 w-max items-center rounded-full border border-green-600 px-2 py-1 text-sm text-green-600 hover:bg-custom-green-hover active:bg-custom-green-pressed disabled:border-gray-400 disabled:bg-inherit disabled:text-gray-400"
       >
         <svg
           viewBox="0 0 1024 1024"
@@ -167,7 +164,7 @@ export const HuiButton: React.FC<HuiProps> = (props) => {
       <HeadlessButton
         disabled
         type="button"
-        className="border-3 hover:bg-custom-green-hover active:bg-custom-green-pressed flex h-6 w-max items-center rounded-full border border-green-600 px-2 py-1 text-sm text-green-600 disabled:border-gray-400 disabled:bg-inherit disabled:text-gray-400"
+        className="border-3 flex h-6 w-max items-center rounded-full border border-green-600 px-2 py-1 text-sm text-green-600 hover:bg-custom-green-hover active:bg-custom-green-pressed disabled:border-gray-400 disabled:bg-inherit disabled:text-gray-400"
       >
         <svg
           viewBox="0 0 1024 1024"

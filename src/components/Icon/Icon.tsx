@@ -1,8 +1,8 @@
-import React from "react";
 import {
   FontAwesomeIcon,
   type FontAwesomeIconProps,
-} from "@fortawesome/react-fontawesome";
+} from '@fortawesome/react-fontawesome';
+import React from 'react';
 
 export const Icon: React.FC<FontAwesomeIconProps> = (props) => {
   return <FontAwesomeIcon {...props} />;

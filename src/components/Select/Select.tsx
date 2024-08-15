@@ -3,20 +3,20 @@ import {
   ListboxButton,
   ListboxOption,
   ListboxOptions,
-} from "@headlessui/react";
-import { Select as AntdSelect, type SelectProps } from "antd";
-import React, { useState } from "react";
+} from '@headlessui/react';
+import { Select as AntdSelect, type SelectProps } from 'antd';
+import React, { useState } from 'react';
 
 export const Select: React.FC<SelectProps> = (props) => {
   return <AntdSelect {...props} />;
 };
 
 const people = [
-  { id: 1, name: "Durward Reynolds" },
-  { id: 2, name: "Kenton Towne" },
-  { id: 3, name: "Therese Wunsch" },
-  { id: 4, name: "Benedict Kessler" },
-  { id: 5, name: "Katelyn Rohan" },
+  { id: 1, name: 'Durward Reynolds' },
+  { id: 2, name: 'Kenton Towne' },
+  { id: 3, name: 'Therese Wunsch' },
+  { id: 4, name: 'Benedict Kessler' },
+  { id: 5, name: 'Katelyn Rohan' },
 ];
 
 export function HuiSelect() {
@@ -95,7 +95,7 @@ export function HuiSelect() {
                   key={person.id}
                   className={({ active }) =>
                     `relative cursor-pointer select-none py-2 pl-10 pr-4 ${
-                      active ? "bg-blue-100 text-blue-900" : "text-gray-900"
+                      active ? 'bg-blue-100 text-blue-900' : 'text-gray-900'
                     }`
                   }
                   value={person}
@@ -121,7 +121,7 @@ export function HuiSelect() {
 
                       <span
                         className={`block truncate ${
-                          selected ? "font-medium" : "font-normal"
+                          selected ? 'font-medium' : 'font-normal'
                         }`}
                       >
                         {person.name}

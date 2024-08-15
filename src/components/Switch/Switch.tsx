@@ -1,6 +1,6 @@
-import { Field, Switch as HuiSwitch, Label } from "@headlessui/react";
-import { Switch as AntdSwitch, type SwitchProps } from "antd";
-import React from "react";
+import { Field, Switch as HuiSwitch } from '@headlessui/react';
+import { Switch as AntdSwitch, type SwitchProps } from 'antd';
+import React from 'react';
 interface AntdSwitchProps extends SwitchProps {
   label?: string;
 }

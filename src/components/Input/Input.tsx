@@ -1,9 +1,9 @@
-import React from "react";
-import { Input as AntdInput, type InputProps as AntdInputProps } from "antd";
 import {
   Input as HlUiInput,
   type InputProps as HlInputProps,
-} from "@headlessui/react";
+} from '@headlessui/react';
+import { Input as AntdInput, type InputProps as AntdInputProps } from 'antd';
+import React from 'react';
 
 export const AntDesignInput: React.FC<AntdInputProps> = (props) => {
   return <AntdInput {...props} />;
