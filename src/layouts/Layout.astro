@@ -20,6 +20,19 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <nav class="text-center">
+      <a href="/">
+        <h1 class="inline text-3xl text-blue-600 underline">HeadlessUI</h1>
+      </a>
+      <span class="text-3xl">|</span>
+      <a href="/daisy">
+        <h1 class="inline text-3xl text-blue-600 underline">daisyUI</h1>
+      </a>
+      <span class="text-3xl">|</span>
+      <a href="/antd">
+        <h1 class="inline text-3xl text-blue-600 underline">antd</h1>
+      </a>
+    </nav>
     <slot />
   </body>
 </html>
@@ -38,6 +51,9 @@ const { title } = Astro.props;
   html {
     font-family: system-ui, sans-serif;
     background-color: #fdfdfd;
+  }
+  body {
+    padding: 20px;
   }
   code {
     font-family:

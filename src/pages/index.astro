@@ -1,31 +1,25 @@
 ---
-import { Button, HuiButton } from '../components/Button/Button';
-import { Checkbox, HuiCheckbox } from '../components/Checkbox/Checkbox';
-import { Icon } from '../components/Icon/Icon';
-import { AntDesignInput, HeadlessUiInput } from '../components/Input/Input';
-import { Select, HuiSelect } from '../components/Select/Select';
-import { AntDesignSwitch, HeadlessUiSwitch } from '../components/Switch/Switch';
-import {
-  Link,
-  Text,
-  Title,
-  HuiTypographyComponent,
-} from '../components/Typography/Typography';
+import { Button } from '../components/headlessUI/Button';
+import { Checkbox } from '../components/headlessUI/Checkbox';
+import { Input } from '../components/headlessUI/Input';
+import { Select } from '../components/headlessUI/Select';
+import { Switch } from '../components/headlessUI/Switch';
+import { HuiTypographyComponent } from '../components/headlessUI/Typography';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-  <main class="grid grid-cols-2 gap-4">
+  <main class="grid min-h-screen place-items-center p-4">
     {/* Headless UI Section */}
-    <div class="flex flex-col gap-2 border-2 p-2">
+    <div class="flex flex-col gap-4 border-2 p-6">
       <h1 class="text-center text-4xl">Headless UI</h1>
 
       {/* Headless UI Switches */}
       <hr />
       <h2 class="mr-auto font-bold">Switch</h2>
 
-      <HeadlessUiSwitch client:load />
-      <HeadlessUiSwitch client:load label="Label" />
+      <Switch client:load />
+      <Switch client:load label="Label" />
 
       {/* Headless UI Typography */}
       <hr />
@@ -37,400 +31,25 @@ import Layout from '../layouts/Layout.astro';
       <hr />
       <h2 class="mr-auto font-bold">Input</h2>
 
-      <HeadlessUiInput />
+      <Input />
 
       {/* Headless UI Select */}
       <hr />
       <h2 class="mr-auto font-bold">Select</h2>
 
-      <HuiSelect client:load />
+      <Select client:load />
 
       {/* Headless UI Checkbox */}
       <hr />
       <h2 class="mr-auto font-bold">Checkbox</h2>
 
-      <HuiCheckbox />
+      <Checkbox />
 
       {/* Headless UI Button */}
       <hr />
       <h2 class="mr-auto font-bold">Button</h2>
 
-      <HuiButton>elo</HuiButton>
-    </div>
-    {/* daisyUI Section */}
-    <div class="flex flex-col gap-2 border-2 p-2">
-      <h1 class="text-center text-4xl">daisyUI</h1>
-      <hr />
-      <h2 class="mr-auto font-bold">Switch</h2>
-      <input
-        type="checkbox"
-        class="daisy-toggle-success daisy-toggle"
-        checked="checked"
-      />
-
-      <input
-        type="checkbox"
-        class="daisy-toggle-warning daisy-toggle"
-        checked="checked"
-      />
-      <input
-        type="checkbox"
-        class="daisy-toggle-info daisy-toggle"
-        checked="checked"
-      />
-      <input
-        type="checkbox"
-        class="daisy-toggle-error daisy-toggle"
-        checked="checked"
-      />
-
-      <hr />
-      <h2 class="mr-auto font-bold">Typography</h2>
-      <div class="prose">
-        <h1 class="text-6xl">This is a Heading 1</h1>
-        <h1 class="text-4xl">This is a Heading 2</h1>
-        <h1 class="text-3xl">This is a Heading 3</h1>
-        <p>
-          This is a paragraph. It has some text describing something
-          interesting.
-        </p>
-        <blockquote
-          class="text-xl font-semibold italic text-gray-900 underline"
-        >
-          This is a blockquote, providing some highlighted text or a quote.
-        </blockquote>
-        <ul class="ax-w-md list-inside list-disc space-y-1 text-gray-900">
-          <li>This is an item in a list.</li>
-          <li>Here's another item.</li>
-          <li>And another one.</li>
-        </ul>
-
-        <ol class="max-w-md list-inside list-decimal space-y-1 text-gray-900">
-          <li>This is an item in a list.</li>
-          <li>Here's another item.</li>
-          <li>And another one.</li>
-        </ol>
-        <a
-          href="https://wp.pl"
-          target="_blank"
-          class="font-medium text-blue-600 hover:underline dark:text-blue-500"
-        >
-          daisyUI Link
-        </a>
-      </div>
-
-      <hr />
-      <h2 class="mr-auto font-bold">Input</h2>
-      <!-- <input
-        type="text"
-        placeholder="Type here"
-        class="daisy-input-bordered daisy-input block w-full max-w-xs rounded border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
-      /> -->
-
-      <label class="input input-bordered flex items-center gap-2">
-        <input type="text" class="grow" placeholder="Search" />
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 16 16"
-          fill="currentColor"
-          class="h-4 w-4 opacity-70"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-            clip-rule="evenodd"
-          >
-          </path>
-        </svg>
-      </label>
-
-      <hr />
-      <h2 class="mr-auto font-bold">Select</h2>
-      <select class="daisy-select w-full max-w-xs">
-        <option disabled selected>Pick your favorite Simpson</option>
-        <option>Homer</option>
-        <option>Marge</option>
-        <option>Bart</option>
-        <option>Lisa</option>
-        <option>Maggie</option>
-      </select>
-
-      <details class="dropdown">
-        <summary class="btn m-1">open or close</summary>
-        <ul
-          class="menu dropdown-content z-[1] w-52 rounded-box bg-base-100 p-2 shadow"
-        >
-          <li><a>Item 1</a></li>
-          <li><a>Item 2</a></li>
-        </ul>
-      </details>
-
-      <hr />
-      <h2 class="mr-auto font-bold">Checkbox</h2>
-      <input type="checkbox" checked="checked" class="checkbox" />
-
-      <hr />
-      <h2 class="mr-auto font-bold">Button</h2>
-      <div class="grid w-1/2 grid-cols-2 gap-2">
-        <button
-          class="flex h-6 w-max items-center rounded-full bg-green-600 px-2 py-1 text-sm font-medium text-white hover:bg-green-700 active:bg-green-800 disabled:bg-gray-400"
-        >
-          Button
-        </button>
-        <button
-          disabled
-          class="flex h-6 w-max items-center rounded-full bg-green-600 px-2 py-1 text-sm font-medium text-white hover:bg-green-700 active:bg-green-800 disabled:bg-gray-400"
-        >
-          Button
-        </button>
-
-        <button
-          class="flex h-6 w-max items-center justify-center gap-2 rounded-full bg-green-600 px-2 py-1 text-center text-sm font-medium text-white hover:bg-green-700 active:bg-green-800 disabled:bg-gray-400"
-        >
-          Button<svg
-            viewBox="0 0 1024 1024"
-            fill="currentColor"
-            height="16px"
-            width="16px"
-          >
-            <path
-              d="M696 480H544V328c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v152H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h152v152c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V544h152c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z"
-            >
-            </path>
-            <path
-              d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
-            >
-            </path>
-          </svg>
-        </button>
-
-        <button
-          disabled
-          class="flex h-6 w-max items-center justify-center gap-2 rounded-full bg-green-600 px-2 py-1 text-center text-sm font-medium text-white hover:bg-green-700 active:bg-green-800 disabled:bg-gray-400"
-        >
-          Button<svg
-            viewBox="0 0 1024 1024"
-            fill="currentColor"
-            height="16px"
-            width="16px"
-          >
-            <path
-              d="M696 480H544V328c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v152H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h152v152c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V544h152c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z"
-            >
-            </path>
-            <path
-              d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
-            >
-            </path>
-          </svg>
-        </button>
-
-        <button
-          class="flex h-6 w-max items-center rounded-full bg-green-600 px-2 py-1 text-sm font-medium text-white hover:bg-green-700 active:bg-green-800 disabled:bg-gray-400"
-        >
-          <svg
-            viewBox="0 0 1024 1024"
-            fill="currentColor"
-            height="16px"
-            width="16px"
-          >
-            <path
-              d="M696 480H544V328c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v152H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h152v152c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V544h152c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z"
-            >
-            </path>
-            <path
-              d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
-            >
-            </path>
-          </svg>
-        </button>
-
-        <button
-          disabled
-          class="flex h-6 w-max items-center rounded-full bg-green-600 px-2 py-1 text-sm font-medium text-white hover:bg-green-700 active:bg-green-800 disabled:bg-gray-400"
-        >
-          <svg
-            viewBox="0 0 1024 1024"
-            fill="currentColor"
-            height="16px"
-            width="16px"
-          >
-            <path
-              d="M696 480H544V328c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v152H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h152v152c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V544h152c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z"
-            >
-            </path>
-            <path
-              d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
-            >
-            </path>
-          </svg>
-        </button>
-
-        <button
-          type="button"
-          class="border-3 flex h-6 w-max items-center rounded-full border border-green-600 px-2 py-1 text-sm font-medium text-green-600 hover:bg-custom-green-hover active:bg-custom-green-pressed disabled:border-gray-400 disabled:bg-inherit disabled:text-gray-400"
-        >
-          Button
-        </button>
-
-        <button
-          disabled
-          type="button"
-          class="border-3 flex h-6 w-max items-center rounded-full border border-green-600 px-2 py-1 text-sm font-medium text-green-600 hover:bg-custom-green-hover active:bg-custom-green-pressed disabled:border-gray-400 disabled:bg-inherit disabled:text-gray-400"
-        >
-          Disabled
-        </button>
-
-        <button
-          type="button"
-          class="border-3 flex h-6 w-max items-center justify-center gap-2 rounded-full border border-green-600 px-2 py-1 text-center text-sm font-medium text-green-600 hover:bg-custom-green-hover active:bg-custom-green-pressed disabled:border-gray-400 disabled:bg-gray-400 disabled:bg-inherit disabled:text-gray-400"
-        >
-          Button
-          <svg
-            viewBox="0 0 1024 1024"
-            fill="currentColor"
-            height="16px"
-            width="16px"
-          >
-            <path
-              d="M696 480H544V328c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v152H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h152v152c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V544h152c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z"
-            >
-            </path>
-            <path
-              d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
-            >
-            </path>
-          </svg>
-        </button>
-
-        <button
-          disabled
-          type="button"
-          class="border-3 flex h-6 w-max items-center justify-center gap-2 rounded-full border border-green-600 px-2 py-1 text-center text-sm font-medium text-green-600 hover:bg-custom-green-hover active:bg-custom-green-pressed disabled:border-gray-400 disabled:bg-gray-400 disabled:bg-inherit disabled:text-gray-400"
-        >
-          Disabled
-          <svg
-            viewBox="0 0 1024 1024"
-            fill="currentColor"
-            height="16px"
-            width="16px"
-          >
-            <path
-              d="M696 480H544V328c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v152H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h152v152c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V544h152c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z"
-            >
-            </path>
-            <path
-              d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
-            >
-            </path>
-          </svg>
-        </button>
-
-        <button
-          type="button"
-          class="border-3 flex h-6 w-max items-center rounded-full border border-green-600 px-2 py-1 text-sm text-green-600 hover:bg-custom-green-hover active:bg-custom-green-pressed disabled:border-gray-400 disabled:bg-inherit disabled:text-gray-400"
-        >
-          <svg
-            viewBox="0 0 1024 1024"
-            fill="currentColor"
-            height="16px"
-            width="16px"
-          >
-            <path
-              d="M696 480H544V328c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v152H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h152v152c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V544h152c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z"
-            >
-            </path>
-            <path
-              d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
-            >
-            </path>
-          </svg>
-        </button>
-
-        <button
-          disabled
-          type="button"
-          class="border-3 flex h-6 w-max items-center rounded-full border border-green-600 px-2 py-1 text-sm text-green-600 hover:bg-custom-green-hover active:bg-custom-green-pressed disabled:border-gray-400 disabled:bg-inherit disabled:text-gray-400"
-        >
-          <svg
-            viewBox="0 0 1024 1024"
-            fill="currentColor"
-            height="16px"
-            width="16px"
-          >
-            <path
-              d="M696 480H544V328c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v152H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h152v152c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V544h152c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z"
-            >
-            </path>
-            <path
-              d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
-            >
-            </path>
-          </svg>
-        </button>
-      </div>
-    </div>
-
-    {/* Ant Design Section */}
-    <div class="flex flex-col gap-2 border-2 p-2">
-      <h1 class="text-center text-4xl">Ant Design</h1>
-
-      {/* Ant Design Switches */}
-      <hr />
-      <h2 class="mr-auto font-bold">Switch</h2>
-
-      <AntDesignSwitch client:load />
-      <AntDesignSwitch client:load label="Label" />
-
-      {/* Ant Design Typography */}
-      <hr />
-      <h2 class="mr-auto font-bold">Typography</h2>
-
-      <Title>This is a Heading 1</Title>
-      <Title level={2}>This is a Heading 2</Title>
-      <Title level={3}>This is a Heading 3</Title>
-      <Text
-        >This is a paragraph. It has some text describing something interesting.</Text
-      >
-      <Text underline delete strong italic
-        >This is a blockquote, providing some highlighted text or a quote.</Text
-      >
-
-      <Link href="https://ant.design" target="_blank">Ant Design (Link)</Link>
-
-      {/* Ant Design Input */}
-      <hr />
-      <h2 class="mr-auto font-bold">Input</h2>
-
-      <AntDesignInput className="custom-input" placeholder="Enter text here" />
-
-      {/* Ant Design Select */}
-      <hr />
-      <h2 class="mr-auto font-bold">Select</h2>
-
-      <Select
-        defaultValue="lucy"
-        onChange={() => console.log('elo')}
-        options={[
-          { key: 1, value: 'jack', label: 'Jack' },
-          { key: 2, value: 'lucy', label: 'Lucy' },
-          { key: 3, value: 'Yiminghe', label: 'yiminghe' },
-          { key: 4, value: 'disabled', label: 'Disabled', disabled: true },
-        ]}
-      />
-
-      {/* Ant Design Checkbox */}
-      <hr />
-      <h2 class="mr-auto font-bold">Checkbox</h2>
-
-      <Checkbox>Checkbox</Checkbox>
-
-      {/* Ant Design Button */}
-      <hr />
-      <h2 class="mr-auto font-bold">Button</h2>
-
-      <Button>Submit</Button>
-      <Icon className="custom-icon" icon="check" />
+      <Button>elo</Button>
     </div>
   </main>
 </Layout>

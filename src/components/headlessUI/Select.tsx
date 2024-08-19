@@ -4,12 +4,7 @@ import {
   ListboxOption,
   ListboxOptions,
 } from '@headlessui/react';
-import { Select as AntdSelect, type SelectProps } from 'antd';
-import React, { useState } from 'react';
-
-export const Select: React.FC<SelectProps> = (props) => {
-  return <AntdSelect {...props} />;
-};
+import { useState } from 'react';
 
 const people = [
   { id: 1, name: 'Durward Reynolds' },
@@ -19,7 +14,7 @@ const people = [
   { id: 5, name: 'Katelyn Rohan' },
 ];
 
-export function HuiSelect() {
+export function Select() {
   const [selectedPerson, setSelectedPerson] = useState(people[0]);
   const [isOpen, setIsOpen] = useState(false);
   return (

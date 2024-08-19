@@ -1,0 +1,65 @@
+---
+import { Button, Checkbox, Select } from 'antd';
+import { Link, Text, Title } from '../components/headlessUI/Typography';
+import Layout from '../layouts/Layout.astro';
+import { Input } from '../components/antd/Input';
+import { Switch } from '../components/antd/Switch';
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="grid min-h-screen place-items-center p-4">
+    <div class="flex flex-col gap-4 border-2 p-6">
+      <h1 class="text-center text-4xl">Ant Design</h1>
+
+      {/* Ant Design Switches */}
+      <hr />
+      <h2 class="font-bold">Switch</h2>
+      <Switch client:load />
+      <Switch client:load label="Label" />
+
+      {/* Ant Design Typography */}
+      <hr />
+      <h2 class="font-bold">Typography</h2>
+      <Title>This is a Heading 1</Title>
+      <Title level={2}>This is a Heading 2</Title>
+      <Title level={3}>This is a Heading 3</Title>
+      <Text
+        >This is a paragraph. It has some text describing something interesting.</Text
+      >
+      <Text underline delete strong italic>
+        This is a blockquote, providing some highlighted text or a quote.
+      </Text>
+
+      <Link href="https://ant.design" target="_blank">Ant Design (Link)</Link>
+
+      {/* Ant Design Input */}
+      <hr />
+      <h2 class="font-bold">Input</h2>
+      <Input className="custom-input" placeholder="Enter text here" />
+
+      {/* Ant Design Select */}
+      <hr />
+      <h2 class="font-bold">Select</h2>
+      <Select
+        defaultValue="lucy"
+        onChange={() => console.log('elo')}
+        options={[
+          { key: 1, value: 'jack', label: 'Jack' },
+          { key: 2, value: 'lucy', label: 'Lucy' },
+          { key: 3, value: 'Yiminghe', label: 'yiminghe' },
+          { key: 4, value: 'disabled', label: 'Disabled', disabled: true },
+        ]}
+      />
+
+      {/* Ant Design Checkbox */}
+      <hr />
+      <h2 class="font-bold">Checkbox</h2>
+      <Checkbox>Checkbox</Checkbox>
+
+      {/* Ant Design Button */}
+      <hr />
+      <h2 class="font-bold">Button</h2>
+      <Button>Submit</Button>
+    </div>
+  </main>
+</Layout>

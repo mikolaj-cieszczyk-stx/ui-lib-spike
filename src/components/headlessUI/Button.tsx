@@ -2,21 +2,8 @@ import {
   Button as HeadlessButton,
   type ButtonProps as HuiProps,
 } from '@headlessui/react';
-import {
-  Button as AntdButton,
-  type ButtonProps as AntdButtonProps,
-} from 'antd';
 
-export const Button: React.FC<AntdButtonProps> = (props) => {
-  return (
-    <AntdButton
-      {...props}
-      className="mb-2 w-1/4 rounded-full bg-blue-700 px-2 py-1 text-sm font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
-    />
-  );
-};
-
-export const HuiButton: React.FC<HuiProps> = (props) => {
+export const Button: React.FC<HuiProps> = () => {
   return (
     <div className="grid grid-cols-2 gap-2">
       <HeadlessButton
