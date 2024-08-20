@@ -1,0 +1,51 @@
+---
+import { Button } from '../components/headlessUI/Button';
+import { Checkbox } from '../components/headlessUI/Checkbox';
+import { Input } from '../components/headlessUI/Input';
+import { Select } from '../components/headlessUI/Select';
+import { Switch } from '../components/headlessUI/Switch';
+import { HuiTypographyComponent } from '../components/headlessUI/Typography';
+---
+
+<main class="grid min-h-screen place-items-center p-4">
+  <div class="flex flex-col gap-4 border-2 p-6">
+    <h1 class="text-center text-4xl">Headless UI</h1>
+
+    {/* Headless UI Switches */}
+    <hr />
+    <h2 class="mr-auto font-bold">Switch</h2>
+
+    <Switch client:load />
+    <Switch client:load label="Label" />
+
+    {/* Headless UI Typography */}
+    <hr />
+    <h2 class="mr-auto font-bold">Typography</h2>
+
+    <HuiTypographyComponent />
+
+    {/* Headless UI Input */}
+    <hr />
+    <h2 class="mr-auto font-bold">Input</h2>
+
+    <Input />
+
+    {/* Headless UI Select */}
+    <hr />
+    <h2 class="mr-auto font-bold">Select</h2>
+
+    <Select client:load />
+
+    {/* Headless UI Checkbox */}
+    <hr />
+    <h2 class="mr-auto font-bold">Checkbox</h2>
+
+    <Checkbox />
+
+    {/* Headless UI Button */}
+    <hr />
+    <h2 class="mr-auto font-bold">Button</h2>
+
+    <Button>elo</Button>
+  </div>
+</main>

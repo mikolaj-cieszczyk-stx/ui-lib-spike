@@ -40,8 +40,8 @@ export function Select() {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M13 7C13 10.3137 10.3137 13 7 13C3.68629 13 1 10.3137 1 7C1 3.68629 3.68629 1 7 1C10.3137 1 13 3.68629 13 7ZM14 7C14 10.866 10.866 14 7 14C3.13401 14 0 10.866 0 7C0 3.13401 3.13401 0 7 0C10.866 0 14 3.13401 14 7ZM8 7V2.5H7V7H4V8H7C7.55228 8 8 7.55228 8 7Z"
                     fill="#008075"
                   />
@@ -58,8 +58,8 @@ export function Select() {
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
                       d="M1.3125 5.5L0.687805 4.71913L5.68781 0.719131C5.84433 0.593913 6.05732 0.576025 6.22998 0.665466L6.3125 0.719131L11.3125 4.71913L10.6878 5.5L6.00015 1.75057L1.3125 5.5Z"
                       fill="#008075"
                     />
@@ -74,8 +74,8 @@ export function Select() {
                     transform="rotate(180)"
                   >
                     <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
                       d="M1.3125 5.5L0.687805 4.71913L5.68781 0.719131C5.84433 0.593913 6.05732 0.576025 6.22998 0.665466L6.3125 0.719131L11.3125 4.71913L10.6878 5.5L6.00015 1.75057L1.3125 5.5Z"
                       fill="#008075"
                     />
@@ -106,8 +106,8 @@ export function Select() {
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
+                            fillRule="evenodd"
+                            clipRule="evenodd"
                             d="M13 7C13 10.3137 10.3137 13 7 13C3.68629 13 1 10.3137 1 7C1 3.68629 3.68629 1 7 1C10.3137 1 13 3.68629 13 7ZM14 7C14 10.866 10.866 14 7 14C3.13401 14 0 10.866 0 7C0 3.13401 3.13401 0 7 0C10.866 0 14 3.13401 14 7ZM8 7V2.5H7V7H4V8H7C7.55228 8 8 7.55228 8 7Z"
                             fill="#008075"
                           />

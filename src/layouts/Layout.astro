@@ -2,11 +2,35 @@
 import '../base.css';
 import 'antd/dist/reset.css';
 
-interface Props {
-  title: string;
-}
-
-const { title } = Astro.props;
+const items = [
+  {
+    title: 'Headless UI',
+    url: '/hui',
+    links: {
+      docs: 'https://headlessui.com/',
+      repo: 'https://github.com/tailwindlabs/headlessui',
+      npm: 'https://www.npmjs.com/package/@headlessui/react',
+    },
+  },
+  {
+    title: 'daisyUI',
+    url: '/daisy',
+    links: {
+      docs: 'https://daisyui.com/docs/install/',
+      repo: 'https://github.com/daisyui/react-daisyui',
+      npm: 'https://www.npmjs.com/package/react-daisyui',
+    },
+  },
+  {
+    title: 'Ant Design',
+    url: '/antd',
+    links: {
+      docs: 'https://ant.design/',
+      repo: 'https://github.com/ant-design/ant-design',
+      npm: 'https://www.npmjs.com/package/antd',
+    },
+  },
+];
 ---
 
 <!doctype html>
@@ -17,22 +41,82 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>Astro UI Libraries Check</title>
   </head>
   <body>
-    <nav class="text-center">
+    <div class="mx-auto w-max">
       <a href="/">
-        <h1 class="inline text-3xl text-blue-600 underline">HeadlessUI</h1>
+        <h1 class="flex items-center text-6xl">
+          <svg viewBox="0 0 24 24" height="1em" width="1em">
+            <path
+              d="M15.551.6c.196.244.296.572.496 1.229l4.368 14.347a18.18 18.18 0 00-5.222-1.768L12.35 4.8a.37.37 0 00-.71.002l-2.81 9.603a18.175 18.175 0 00-5.245 1.771L7.974 1.827c.2-.656.3-.984.497-1.227a1.613 1.613 0 01.654-.484C9.415 0 9.757 0 10.443 0h3.135c.686 0 1.03 0 1.32.117A1.614 1.614 0 0115.55.6z"
+              fill="black"
+            >
+            </path>
+            <path
+              d="M16.074 16.86c-.72.616-2.157 1.035-3.812 1.035-2.032 0-3.735-.632-4.187-1.483-.161.488-.198 1.046-.198 1.402 0 0-.106 1.75 1.111 2.968 0-.632.513-1.145 1.145-1.145 1.083 0 1.082.945 1.081 1.712v.069c0 1.164.711 2.161 1.723 2.582a2.347 2.347 0 01-.236-1.029c0-1.11.652-1.523 1.41-2.003.602-.383 1.272-.807 1.733-1.66a3.129 3.129 0 00.378-1.494 3.14 3.14 0 00-.148-.954z"
+              fill="#FF5B00"
+            >
+            </path>
+          </svg>
+          Astro UI Libraries Check
+        </h1>
       </a>
-      <span class="text-3xl">|</span>
-      <a href="/daisy">
-        <h1 class="inline text-3xl text-blue-600 underline">daisyUI</h1>
+    </div>
+    <header class="mx-auto grid w-4/5 grid-cols-3 place-items-center gap-4">
+      {
+        items.map((item) => (
+          <div class="w-full overflow-hidden rounded shadow-lg">
+            <div class="px-6 py-4">
+              <a href={item.url}>
+                <div class="mb-2 w-full truncate text-3xl font-bold text-blue-700 underline">
+                  {item.title}
+                </div>
+              </a>
+              <p class="mb-2 text-base text-gray-700">
+                <b>Docs:</b>
+                <a
+                  href={`${item.links.docs}`}
+                  target="_blank"
+                  class="block w-full truncate text-blue-500"
+                >
+                  {item.links.docs}
+                </a>
+              </p>
+              <p class="mb-2 text-base text-gray-700">
+                <b>Repository:</b>
+                <a
+                  href={`${item.links.repo}`}
+                  target="_blank"
+                  class="block w-full truncate text-blue-500"
+                >
+                  {item.links.repo}
+                </a>
+              </p>
+              <p class="mb-2 text-base text-gray-700">
+                <b>NPM:</b>
+                <a
+                  href={`${item.links.npm}`}
+                  target="_blank"
+                  class="block w-full truncate text-blue-500"
+                >
+                  {item.links.npm}
+                </a>
+              </p>
+            </div>
+          </div>
+        ))
+      }
+    </header>
+    <h3 class="m-8 text-center text-2xl">
+      <a
+        href="/merged"
+        class="daisy-link-hover daisy-link text-blue-700 underline"
+      >
+        Click here to see all libraries on one page
       </a>
-      <span class="text-3xl">|</span>
-      <a href="/antd">
-        <h1 class="inline text-3xl text-blue-600 underline">antd</h1>
-      </a>
-    </nav>
+    </h3>
+    <hr class="m-8" />
     <slot />
   </body>
 </html>
@@ -54,6 +138,13 @@ const { title } = Astro.props;
   }
   body {
     padding: 20px;
+  }
+  main {
+    margin: auto;
+    padding: 1rem;
+    max-width: calc(100% - 2rem);
+    font-size: 20px;
+    line-height: 1.6;
   }
   code {
     font-family:

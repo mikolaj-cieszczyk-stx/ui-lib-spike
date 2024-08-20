@@ -1,7 +1,3 @@
-import { Typography as AntdTypography } from 'antd';
-
-export const { Text, Link, Title, Paragraph } = AntdTypography;
-
 export const HuiTypographyComponent = () => {
   return (
     <div className="prose">
