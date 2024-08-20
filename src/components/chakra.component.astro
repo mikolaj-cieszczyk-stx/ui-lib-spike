@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { ChakraProviderWrapper } from './chakraUi/ChakraProviderWrapper';
+import { Box, Switch, FormControl, FormLabel } from '@chakra-ui/react';
+---
+
+<ChakraProviderWrapper>
+  <main class="grid min-h-screen place-items-center p-4">
+    <div class="flex flex-col gap-4 border-2 p-6">
+      <h1 class="text-center text-4xl">Ant Design</h1>
+
+      <hr />
+
+      <Switch id="email-alerts" bgColor="red" />
+      <Switch size="sm" />
+      <Switch size="md" />
+      <Switch size="lg" />
+    </div>
+  </main>
+</ChakraProviderWrapper>
