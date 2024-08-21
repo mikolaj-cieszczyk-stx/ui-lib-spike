@@ -1,7 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   important: true,
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  content: [
+    './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+    './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     extend: {
       colors: {
@@ -20,6 +23,7 @@ export default {
     require('daisyui'),
     require('tailwindcss-react-aria-components'),
     require('tailwindcss-animate'),
+    require('@nextui-org/react'),
   ],
   daisyui: {
     themes: false, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
@@ -31,4 +35,5 @@ export default {
     logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
     themeRoot: ':root', // The element that receives theme color CSS variables
   },
+  darkMode: 'class',
 };

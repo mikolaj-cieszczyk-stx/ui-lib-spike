@@ -1,0 +1,38 @@
+---
+import Button from './NextUi/Button';
+import Checkbox from './NextUi/Checkbox';
+import Input from './NextUi/Input';
+import Select from './NextUi/Select';
+import Switch from './NextUi/Switch';
+import Typography from './NextUi/Typography';
+---
+
+<main class="grid min-h-screen place-items-center p-4">
+  <div class="flex flex-col gap-4 border-2 p-6">
+    <h1 class="text-center text-4xl">NextUI</h1>
+
+    <hr />
+    <h2 class="font-bold">Switch</h2>
+    <div><Switch client:load /></div>
+
+    <hr />
+    <h2 class="font-bold">Typography</h2>
+    <div><Typography client:load /></div>
+
+    <hr />
+    <h2 class="font-bold">Input</h2>
+    <div><Input client:load /></div>
+
+    <hr />
+    <h2 class="font-bold">Select</h2>
+    <div><Select client:load /></div>
+
+    <hr />
+    <h2 class="font-bold">Checkbox</h2>
+    <div><Checkbox client:load /></div>
+
+    <hr />
+    <h2 class="font-bold">Button</h2>
+    <div><Button client:load /></div>
+  </div>
+</main>
