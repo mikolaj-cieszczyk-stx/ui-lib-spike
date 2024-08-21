@@ -39,6 +39,16 @@ const items = [
       npm: 'https://www.npmjs.com/package/@chakra-ui/react',
     },
   },
+  {
+    title: 'Radix UI',
+    url: '/radix',
+    links: {
+      docs: 'https://www.radix-ui.com/',
+      repo: 'https://github.com/radix-ui/primitives',
+      repo1: 'https://github.com/radix-ui/themes',
+      npm: 'https://www.npmjs.com/search?q=radix-ui%20',
+    },
+  },
 ];
 ---
 
@@ -80,6 +90,17 @@ const items = [
                     <b>Repository</b>
                   </a>
                 </p>
+                {item.links.repo1 && (
+                  <p class="mb-2 text-base">
+                    <a
+                      href={`${item.links.repo1}`}
+                      target="_blank"
+                      class="daisy-link-hover daisy-link inline w-full truncate text-blue-500"
+                    >
+                      <b>Repository #1</b>
+                    </a>
+                  </p>
+                )}
                 <p class="mb-2 text-base">
                   <a
                     href={`${item.links.npm}`}
