@@ -9,6 +9,7 @@ export const Button: React.FC<HuiProps> = () => {
       <HeadlessButton
         type="button"
         className="flex h-6 w-max items-center rounded-full bg-green-600 px-2 py-1 text-sm font-medium text-white hover:bg-green-700 active:bg-green-800 disabled:bg-gray-400"
+        onClick={() => console.log('elo')}
       >
         Button
       </HeadlessButton>

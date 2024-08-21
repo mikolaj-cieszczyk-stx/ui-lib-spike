@@ -34,9 +34,9 @@ const items = [
     title: 'ChakraUI',
     url: '/chakra',
     links: {
-      docs: 'https://ant.design/',
-      repo: 'https://github.com/ant-design/ant-design',
-      npm: 'https://www.npmjs.com/package/antd',
+      docs: 'https://v2.chakra-ui.com/getting-started',
+      repo: 'https://github.com/chakra-ui/chakra-ui',
+      npm: 'https://www.npmjs.com/package/@chakra-ui/react',
     },
   },
 ];
@@ -55,7 +55,7 @@ const items = [
   <body class="flex h-screen">
     <div class="flex h-full w-64 flex-col bg-gray-800 text-white">
       <nav class="flex-1 p-4">
-        <ul>
+        <ul class="flex h-full flex-col">
           {
             items.map((item) => (
               <li>
@@ -92,7 +92,7 @@ const items = [
               </li>
             ))
           }
-          <li class="mt-auto">
+          <li class="mt-auto text-center">
             <h3>
               <a href="/merged" class="daisy-link-hover daisy-link underline">
                 Click here to see all libraries on a single page
@@ -105,7 +105,7 @@ const items = [
 
     <div class="flex-1 overflow-y-auto bg-gray-100">
       <div
-        class="sticky top-0 z-10 flex items-center justify-center bg-gray-800 p-4 text-center"
+        class="sticky top-0 z-10 flex items-center justify-end bg-gray-800 p-4 text-center"
       >
         <a href="/">
           <h1 class="flex items-center justify-center text-3xl text-white">

@@ -1,20 +1,42 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import 'tailwindcss/tailwind.css';
+import Button from './chakraUi/Button';
 import { ChakraProviderWrapper } from './chakraUi/ChakraProviderWrapper';
-import { Box, Switch, FormControl, FormLabel } from '@chakra-ui/react';
+import { Switch } from './chakraUi/Switch';
+import Typography from './chakraUi/Typography';
+import Input from './chakraUi/Input';
+import Select from './chakraUi/Select';
+import Checkbox from './chakraUi/Checkbox';
 ---
 
 <ChakraProviderWrapper>
   <main class="grid min-h-screen place-items-center p-4">
     <div class="flex flex-col gap-4 border-2 p-6">
-      <h1 class="text-center text-4xl">Ant Design</h1>
+      <h1 class="text-center text-4xl">Chakra UI</h1>
 
       <hr />
+      <h2 class="mr-auto font-bold">Switch</h2>
+      <Switch client:load />
 
-      <Switch id="email-alerts" bgColor="red" />
-      <Switch size="sm" />
-      <Switch size="md" />
-      <Switch size="lg" />
+      <hr />
+      <h2 class="mr-auto font-bold">Typography</h2>
+      <Typography client:load />
+
+      <hr />
+      <h2 class="mr-auto font-bold">Input</h2>
+      <Input client:load />
+
+      <hr />
+      <h2 class="mr-auto font-bold">Select</h2>
+      <Select client:load />
+
+      <hr />
+      <h2 class="mr-auto font-bold">Checkbox</h2>
+      <Checkbox client:load />
+
+      <hr />
+      <h2 class="mr-auto font-bold">Button</h2>
+      <Button client:load />
     </div>
   </main>
 </ChakraProviderWrapper>
